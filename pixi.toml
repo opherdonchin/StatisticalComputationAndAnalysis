@@ -23,6 +23,7 @@ scipy = "==1.11.3"
 pandas = "==2.1.2"
 xarray = "==2023.10.1"
 pip = "==23.2.1"
+pydot = "==3.0.4"
 
 [pypi-dependencies]
 bambi = "==0.13.0"
