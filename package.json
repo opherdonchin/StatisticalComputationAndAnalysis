@@ -1,0 +1,25 @@
+{
+  "name": "statisticalcomputationandanalysis",
+  "version": "1.0.0",
+  "description": "This is the Github for the course Statistical Computation and Analysis. This is a 3rd year undergraduate course for Biomedical Engineers covering basic frequentist statistics upto multvariate ANOVA.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opherdonchin/StatisticalComputationAndAnalysis.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/opherdonchin/StatisticalComputationAndAnalysis/issues"
+  },
+  "homepage": "https://github.com/opherdonchin/StatisticalComputationAndAnalysis#readme",
+  "dependencies": {
+    "clipboardy": "^4.0.0",
+    "katex": "^0.16.21",
+    "puppeteer": "^24.4.0"
+  }
+}
