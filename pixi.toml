@@ -24,6 +24,8 @@ pandas = "==2.2.2"
 xarray = "==2025.1.2"
 pip = "24.1.2.*"
 pydot = "==3.0.4"
+nbconvert = ">=7.16.6,<8"
+jupytext = ">=1.16.7,<2"
 
 [pypi-dependencies]
 bambi = "*"
