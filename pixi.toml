@@ -26,6 +26,7 @@ pip = ">=25.0.1,<26"
 pydot = ">=3.0.4,<4"
 nbconvert = ">=7.16.6,<8"
 jupytext = ">=1.16.7,<2"
+networkx = ">=3.4.2,<4"
 
 [pypi-dependencies]
 bambi = ">=0.15.0, <0.16"
