@@ -8,6 +8,7 @@ version = "0.1.0"
 [tasks]
 
 [dependencies]
+pymc = "*"
 python = "*"
 ipython = "*"
 ipywidgets = "*"
@@ -24,12 +25,8 @@ pydot = "*"
 nbconvert = "*"
 jupytext = "*"
 networkx = "*"
-arviz = ">=0.21.0,<0.22"
-matplotlib = ">=3.10.1,<4"
-pymc = ">=5.22.0,<6"
-bambi = ">=0.15.0,<0.16"
-preliz = ">=0.16.0,<0.17"
-nutpie = ">=0.14.3,<0.15"
+arviz = "*"
+matplotlib = "*"
 
 [pypi-dependencies]
 bambi = "*"
