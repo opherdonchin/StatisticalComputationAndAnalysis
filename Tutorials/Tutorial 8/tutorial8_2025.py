@@ -317,10 +317,13 @@ files.download("ppc4.png")
 
 r_c = radon_know_b.groupby("county")["log_radon"].mean()
 post = id_county.posterior
-post["μ_c"] = post.β_0 + post.β_c
+post["μ_c"] = post.β_0 + post.β_c #+ post.β_b.sel(basement = 'Y')
 post["μ_b"] = post.β_0 + post.β_b
 
-az.plot_lm(y=r_c, x=r_c, y_model=post["μ_c"], kind_model="hdi", kind_pp="hdi", y_model_mean_kwargs={"linestyle": "none", "marker": "o"})
+sorted_indices = np.argsort(r_c.values)
+a = post["μ_c"].isel(county = sorted_indices)
+az.plot_lm(y=r_c[sorted_indices], x=np.arange(len(r_c)), y_model=a, kind_model="hdi", kind_pp="hdi", y_model_mean_kwargs={"linestyle": "none", "marker": "o"})
+plt.xlabel('Counties Sorted by Radon Level')
 plt.savefig("lm.png", bbox_inches='tight')
 files.download("lm.png")
 
@@ -383,7 +386,10 @@ post = id_county.posterior
 post["μ_c"] = post.β_0 + post.β_c
 post["μ_b"] = post.β_0 + post.β_b
 
-az.plot_lm(y=r_c, x=r_c, y_model=post["μ_c"], kind_model="hdi", kind_pp="hdi", y_model_mean_kwargs={"linestyle": "none", "marker": "o"})
+sorted_indices = np.argsort(r_c.values)
+a = post["μ_c"].isel(county = sorted_indices)
+az.plot_lm(y=r_c[sorted_indices], x=np.arange(len(r_c)), y_model=a, kind_model="hdi", kind_pp="hdi", y_model_mean_kwargs={"linestyle": "none", "marker": "o"})
+plt.xlabel('Counties Sorted by Radon Level')
 plt.savefig("lm.png", bbox_inches='tight')
 files.download("lm.png")
 
